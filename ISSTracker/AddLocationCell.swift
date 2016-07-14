@@ -15,7 +15,7 @@ final class AddLocationCell: UITableViewCell {
     @IBOutlet private weak var longitudeTextField: UITextField!
     @IBOutlet private weak var saveFavoriteButton: UIButton!
     
-    @IBAction func saveFavoriteButtonPressed(sender: AnyObject) {
+    @IBAction private func saveFavoriteButtonPressed(sender: AnyObject) {
         
     }
     
