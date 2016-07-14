@@ -1,5 +1,5 @@
 //
-//  SaveLocationCell.swift
+//  AddLocationCell.swift
 //  ISSTracker
 //
 //  Created by Sam Wu on 7/14/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SaveLocationCell: UITableViewCell {
+final class AddLocationCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

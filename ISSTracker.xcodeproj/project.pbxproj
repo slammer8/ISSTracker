@@ -13,8 +13,8 @@
 		9453B7BD1D3811A4004B67D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */; };
 		94B0C7541D383AA600E30E46 /* SavedLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0C7521D383AA600E30E46 /* SavedLocationCell.swift */; };
 		94B0C7551D383AA600E30E46 /* SavedLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B0C7531D383AA600E30E46 /* SavedLocationCell.xib */; };
-		94B0C7581D383D9C00E30E46 /* SaveLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0C7561D383D9C00E30E46 /* SaveLocationCell.swift */; };
-		94B0C7591D383D9C00E30E46 /* SaveLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B0C7571D383D9C00E30E46 /* SaveLocationCell.xib */; };
+		94B0C7581D383D9C00E30E46 /* AddLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0C7561D383D9C00E30E46 /* AddLocationCell.swift */; };
+		94B0C7591D383D9C00E30E46 /* AddLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B0C7571D383D9C00E30E46 /* AddLocationCell.xib */; };
 		94BF00751D38155C00BD2C83 /* ISSTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */; };
 		94BF007D1D3815D500BD2C83 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF007C1D3815D500BD2C83 /* Request.swift */; };
 		94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF007E1D38165C00BD2C83 /* ISSRequest.swift */; };
@@ -52,8 +52,8 @@
 		9453B7BE1D3811A4004B67D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94B0C7521D383AA600E30E46 /* SavedLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedLocationCell.swift; sourceTree = "<group>"; };
 		94B0C7531D383AA600E30E46 /* SavedLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SavedLocationCell.xib; sourceTree = "<group>"; };
-		94B0C7561D383D9C00E30E46 /* SaveLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveLocationCell.swift; sourceTree = "<group>"; };
-		94B0C7571D383D9C00E30E46 /* SaveLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveLocationCell.xib; sourceTree = "<group>"; };
+		94B0C7561D383D9C00E30E46 /* AddLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationCell.swift; sourceTree = "<group>"; };
+		94B0C7571D383D9C00E30E46 /* AddLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLocationCell.xib; sourceTree = "<group>"; };
 		94BF00721D38155C00BD2C83 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTrackerTests.swift; sourceTree = "<group>"; };
 		94BF00761D38155C00BD2C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 				9453B7B61D3811A4004B67D0 /* Main.storyboard */,
 				94B0C7521D383AA600E30E46 /* SavedLocationCell.swift */,
 				94B0C7531D383AA600E30E46 /* SavedLocationCell.xib */,
-				94B0C7561D383D9C00E30E46 /* SaveLocationCell.swift */,
-				94B0C7571D383D9C00E30E46 /* SaveLocationCell.xib */,
+				94B0C7561D383D9C00E30E46 /* AddLocationCell.swift */,
+				94B0C7571D383D9C00E30E46 /* AddLocationCell.xib */,
 				94F3688F1D38316E000272D2 /* InfoViewController.swift */,
 				9453B7B91D3811A4004B67D0 /* Assets.xcassets */,
 				9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */,
@@ -275,7 +275,7 @@
 			files = (
 				9453B7BD1D3811A4004B67D0 /* LaunchScreen.storyboard in Resources */,
 				9453B7BA1D3811A4004B67D0 /* Assets.xcassets in Resources */,
-				94B0C7591D383D9C00E30E46 /* SaveLocationCell.xib in Resources */,
+				94B0C7591D383D9C00E30E46 /* AddLocationCell.xib in Resources */,
 				94B0C7551D383AA600E30E46 /* SavedLocationCell.xib in Resources */,
 				9453B7B81D3811A4004B67D0 /* Main.storyboard in Resources */,
 			);
@@ -349,7 +349,7 @@
 				94F368821D381E94000272D2 /* Parseable.swift in Sources */,
 				94BF00811D3818AB00BD2C83 /* NetworkController.swift in Sources */,
 				94F368891D382075000272D2 /* LocationPassParser.swift in Sources */,
-				94B0C7581D383D9C00E30E46 /* SaveLocationCell.swift in Sources */,
+				94B0C7581D383D9C00E30E46 /* AddLocationCell.swift in Sources */,
 				94F368801D381E73000272D2 /* ModelObjectUpdater.swift in Sources */,
 				94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */,
 				9453B7B11D3811A4004B67D0 /* AppDelegate.swift in Sources */,
