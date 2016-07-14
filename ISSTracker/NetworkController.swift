@@ -11,25 +11,15 @@ import Alamofire
 /// Peforms a network request and returns a response.
 final class NetworkController {
     
-    /*
-     Peforms a network request the provided request
+    /**
+     Performs a network request with a provided request.
      
-     parameters:
-     - request: the request to perform.
-     - completion: the completion block to call.
-     
-     returns: a response, if any
-     
+     - parameter request:    The request to perform.
+     - parameter completion: The completion handler to return after the request completes.
      */
-    static func performRequest(request: Request, completion: (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) -> Void) {
+    static func performRequest(request: Request, completion: (Result<[String: AnyObject]>) -> Void) {
         
         let urlRequest = NSMutableURLRequest(URL: request.absoluteURL)
-        
-        if !request.headers.isEmpty {
-            for (key, value) in request.headers {
-                urlRequest.addValue(value, forHTTPHeaderField: key)
-            }
-        }
         
         urlRequest.HTTPMethod = request.method.rawValue
         
@@ -39,7 +29,19 @@ final class NetworkController {
         
         Alamofire.request(encodedRequest)
             .validate()
-            .response(completionHandler: completion)
+            .responseJSON { response in
+                
+                if let error = response.result.error {
+                    completion(.Failure(error: error))
+                }
+                
+                guard let value = response.result.value as? [String: AnyObject] else {
+                    let error = NSError(domain: "Expected JSON Error", code: -2, userInfo: nil)
+                    completion(.Failure(error: error))
+                    return
+                }
+                completion(.Success(result: value))
+        }
     }
     
 }

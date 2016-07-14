@@ -20,5 +20,5 @@ protocol Parser {
     associatedtype ParsedObject = Parseable
     
     /// Required parser function.
-    static func parse(data: NSData?, request: Request?) -> ParsedObject?
+    static func parse(dictionaryRepresentable: [String: AnyObject]) -> ParsedObject?
 }

@@ -22,9 +22,7 @@ protocol Request {
     
     /// The parameters to pass.
     var parameters: [String: NSObject] { get }
-    
-    /// The request headers.
-    var headers: [String: String] { get }
+
 }
 
 /// Default implementations
@@ -37,9 +35,4 @@ extension Request {
     var absoluteURL: NSURL {
         return NSURL(string: baseURL + path)!
     }
-    
-    var headers: [String: String] {
-        return [:]
-    }
-    
 }
