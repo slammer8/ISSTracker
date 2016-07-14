@@ -12,6 +12,9 @@
 		9453B7BA1D3811A4004B67D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9453B7B91D3811A4004B67D0 /* Assets.xcassets */; };
 		9453B7BD1D3811A4004B67D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */; };
 		94BF00751D38155C00BD2C83 /* ISSTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */; };
+		94BF007D1D3815D500BD2C83 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF007C1D3815D500BD2C83 /* Request.swift */; };
+		94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF007E1D38165C00BD2C83 /* ISSRequest.swift */; };
+		94BF00811D3818AB00BD2C83 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00801D3818AA00BD2C83 /* NetworkController.swift */; };
 		9CF1193C28862EC83D5BC83E /* Pods_ISSTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,9 @@
 		94BF00721D38155C00BD2C83 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTrackerTests.swift; sourceTree = "<group>"; };
 		94BF00761D38155C00BD2C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94BF007C1D3815D500BD2C83 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		94BF007E1D38165C00BD2C83 /* ISSRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSRequest.swift; sourceTree = "<group>"; };
+		94BF00801D3818AA00BD2C83 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		D962FDDB23F4AEB0FDF44DBD /* Pods-ISSTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,7 @@
 				9453B7B61D3811A4004B67D0 /* Main.storyboard */,
 				9453B7B91D3811A4004B67D0 /* Assets.xcassets */,
 				9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */,
+				94BF00821D381A1900BD2C83 /* Networking */,
 				9453B7BE1D3811A4004B67D0 /* Info.plist */,
 			);
 			path = ISSTracker;
@@ -106,6 +113,16 @@
 				94BF00761D38155C00BD2C83 /* Info.plist */,
 			);
 			path = ISSTrackerTests;
+			sourceTree = "<group>";
+		};
+		94BF00821D381A1900BD2C83 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				94BF007C1D3815D500BD2C83 /* Request.swift */,
+				94BF007E1D38165C00BD2C83 /* ISSRequest.swift */,
+				94BF00801D3818AA00BD2C83 /* NetworkController.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		E2BCF112981F40652F302AD4 /* Pods */ = {
@@ -269,7 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94BF00811D3818AB00BD2C83 /* NetworkController.swift in Sources */,
+				94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */,
 				9453B7B11D3811A4004B67D0 /* AppDelegate.swift in Sources */,
+				94BF007D1D3815D500BD2C83 /* Request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
