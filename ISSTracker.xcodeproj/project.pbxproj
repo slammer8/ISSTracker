@@ -11,12 +11,12 @@
 		9453B7B81D3811A4004B67D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9453B7B61D3811A4004B67D0 /* Main.storyboard */; };
 		9453B7BA1D3811A4004B67D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9453B7B91D3811A4004B67D0 /* Assets.xcassets */; };
 		9453B7BD1D3811A4004B67D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */; };
-		9453B7C81D3811A4004B67D0 /* ISSTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453B7C71D3811A4004B67D0 /* ISSTrackerTests.swift */; };
+		94BF00751D38155C00BD2C83 /* ISSTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */; };
 		9CF1193C28862EC83D5BC83E /* Pods_ISSTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9453B7C41D3811A4004B67D0 /* PBXContainerItemProxy */ = {
+		94BF00771D38155C00BD2C83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9453B7A51D3811A3004B67D0 /* Project object */;
 			proxyType = 1;
@@ -34,9 +34,9 @@
 		9453B7B91D3811A4004B67D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9453B7BC1D3811A4004B67D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9453B7BE1D3811A4004B67D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9453B7C31D3811A4004B67D0 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9453B7C71D3811A4004B67D0 /* ISSTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTrackerTests.swift; sourceTree = "<group>"; };
-		9453B7C91D3811A4004B67D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94BF00721D38155C00BD2C83 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTrackerTests.swift; sourceTree = "<group>"; };
+		94BF00761D38155C00BD2C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D962FDDB23F4AEB0FDF44DBD /* Pods-ISSTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +49,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9453B7C01D3811A4004B67D0 /* Frameworks */ = {
+		94BF006F1D38155C00BD2C83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				9453B7AF1D3811A4004B67D0 /* ISSTracker */,
-				9453B7C61D3811A4004B67D0 /* ISSTrackerTests */,
+				94BF00731D38155C00BD2C83 /* ISSTrackerTests */,
 				9453B7AE1D3811A3004B67D0 /* Products */,
 				E2BCF112981F40652F302AD4 /* Pods */,
 				8F1A713B169B840BB253EB4A /* Frameworks */,
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9453B7AD1D3811A3004B67D0 /* ISSTracker.app */,
-				9453B7C31D3811A4004B67D0 /* ISSTrackerTests.xctest */,
+				94BF00721D38155C00BD2C83 /* ISSTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,11 +99,11 @@
 			path = ISSTracker;
 			sourceTree = "<group>";
 		};
-		9453B7C61D3811A4004B67D0 /* ISSTrackerTests */ = {
+		94BF00731D38155C00BD2C83 /* ISSTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				9453B7C71D3811A4004B67D0 /* ISSTrackerTests.swift */,
-				9453B7C91D3811A4004B67D0 /* Info.plist */,
+				94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */,
+				94BF00761D38155C00BD2C83 /* Info.plist */,
 			);
 			path = ISSTrackerTests;
 			sourceTree = "<group>";
@@ -140,22 +140,22 @@
 			productReference = 9453B7AD1D3811A3004B67D0 /* ISSTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9453B7C21D3811A4004B67D0 /* ISSTrackerTests */ = {
+		94BF00711D38155C00BD2C83 /* ISSTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9453B7CF1D3811A4004B67D0 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */;
+			buildConfigurationList = 94BF00791D38155C00BD2C83 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */;
 			buildPhases = (
-				9453B7BF1D3811A4004B67D0 /* Sources */,
-				9453B7C01D3811A4004B67D0 /* Frameworks */,
-				9453B7C11D3811A4004B67D0 /* Resources */,
+				94BF006E1D38155C00BD2C83 /* Sources */,
+				94BF006F1D38155C00BD2C83 /* Frameworks */,
+				94BF00701D38155C00BD2C83 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9453B7C51D3811A4004B67D0 /* PBXTargetDependency */,
+				94BF00781D38155C00BD2C83 /* PBXTargetDependency */,
 			);
 			name = ISSTrackerTests;
 			productName = ISSTrackerTests;
-			productReference = 9453B7C31D3811A4004B67D0 /* ISSTrackerTests.xctest */;
+			productReference = 94BF00721D38155C00BD2C83 /* ISSTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +171,7 @@
 					9453B7AC1D3811A3004B67D0 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
-					9453B7C21D3811A4004B67D0 = {
+					94BF00711D38155C00BD2C83 = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 9453B7AC1D3811A3004B67D0;
 					};
@@ -191,7 +191,7 @@
 			projectRoot = "";
 			targets = (
 				9453B7AC1D3811A3004B67D0 /* ISSTracker */,
-				9453B7C21D3811A4004B67D0 /* ISSTrackerTests */,
+				94BF00711D38155C00BD2C83 /* ISSTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -207,7 +207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9453B7C11D3811A4004B67D0 /* Resources */ = {
+		94BF00701D38155C00BD2C83 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,21 +273,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9453B7BF1D3811A4004B67D0 /* Sources */ = {
+		94BF006E1D38155C00BD2C83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9453B7C81D3811A4004B67D0 /* ISSTrackerTests.swift in Sources */,
+				94BF00751D38155C00BD2C83 /* ISSTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9453B7C51D3811A4004B67D0 /* PBXTargetDependency */ = {
+		94BF00781D38155C00BD2C83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9453B7AC1D3811A3004B67D0 /* ISSTracker */;
-			targetProxy = 9453B7C41D3811A4004B67D0 /* PBXContainerItemProxy */;
+			targetProxy = 94BF00771D38155C00BD2C83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -418,7 +418,7 @@
 			};
 			name = Release;
 		};
-		9453B7D01D3811A4004B67D0 /* Debug */ = {
+		94BF007A1D38155C00BD2C83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -430,7 +430,7 @@
 			};
 			name = Debug;
 		};
-		9453B7D11D3811A4004B67D0 /* Release */ = {
+		94BF007B1D38155C00BD2C83 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -463,14 +463,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9453B7CF1D3811A4004B67D0 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */ = {
+		94BF00791D38155C00BD2C83 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9453B7D01D3811A4004B67D0 /* Debug */,
-				9453B7D11D3811A4004B67D0 /* Release */,
+				94BF007A1D38155C00BD2C83 /* Debug */,
+				94BF007B1D38155C00BD2C83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
