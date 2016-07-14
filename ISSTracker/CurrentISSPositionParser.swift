@@ -15,9 +15,11 @@ final class CurrentISSPositionParser: Parser {
     
     static func parse(dictionaryRepresentable: [String: AnyObject]) -> CurrentISSPosition? {
         
-        guard let positionJSON = dictionaryRepresentable["iss_position"] as? JSON, unixTime = dictionaryRepresentable["timestamp"] as? Double else {
+        guard let positionValue = dictionaryRepresentable["iss_position"], unixTime = dictionaryRepresentable["timestamp"] as? Double else {
             return nil
         }
+        
+        let positionJSON = JSON(positionValue)
         
         let timeStamp = NSDate(timeIntervalSince1970: unixTime)
         

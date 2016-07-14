@@ -15,9 +15,12 @@ final class LocationPassParser: Parser {
     
     static func parse(dictionaryRepresentable: [String: AnyObject]) -> LocationPass? {
         
-        guard let requestJSON = dictionaryRepresentable["request"] as? JSON, responseJSON = dictionaryRepresentable["response"] as? JSON else {
+        guard let requestValue = dictionaryRepresentable["request"], responseValue = dictionaryRepresentable["response"] else {
             return nil
         }
+        
+        let requestJSON = JSON(requestValue)
+        let responseJSON = JSON(responseValue)
         
         let timeStamp = NSDate(timeIntervalSince1970: requestJSON["datetime"].doubleValue)
         
