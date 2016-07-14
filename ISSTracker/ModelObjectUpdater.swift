@@ -17,7 +17,7 @@ final class ModelObjectUpdater<T:Parseable> {
      - parameter request:    The request to perform.
      - parameter completion: The completion with the parsed object, if any.
      */
-    func performRequest(request: Request, completion: (Result<T.ParserType.ParsedObject>) -> Void) {
+    func performRequest(request: Request, completion: (Result<T>) -> Void) {
         
         NetworkController.performRequest(request) { result in
             
@@ -27,7 +27,7 @@ final class ModelObjectUpdater<T:Parseable> {
                 
             case let .Success(value):
                 
-                guard let object = T.ParserType.parse(value) else {
+                guard let object = T.ParserType.parse(value) as? T else {
                     
                     let error = NSError(domain: "Parsing Error", code: -1, userInfo: nil)
                     completion(.Failure(error: error))
