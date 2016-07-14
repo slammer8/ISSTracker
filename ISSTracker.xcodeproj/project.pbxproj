@@ -23,6 +23,7 @@
 		94F368891D382075000272D2 /* LocationPassParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F368881D382075000272D2 /* LocationPassParser.swift */; };
 		94F3688B1D38264E000272D2 /* PassTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3688A1D38264E000272D2 /* PassTime.swift */; };
 		94F3688D1D382DA8000272D2 /* CurrentISSPositionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3688C1D382DA8000272D2 /* CurrentISSPositionParser.swift */; };
+		94F368901D38316E000272D2 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3688F1D38316E000272D2 /* InfoViewController.swift */; };
 		9CF1193C28862EC83D5BC83E /* Pods_ISSTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		94F368881D382075000272D2 /* LocationPassParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPassParser.swift; sourceTree = "<group>"; };
 		94F3688A1D38264E000272D2 /* PassTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassTime.swift; sourceTree = "<group>"; };
 		94F3688C1D382DA8000272D2 /* CurrentISSPositionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentISSPositionParser.swift; sourceTree = "<group>"; };
+		94F3688F1D38316E000272D2 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D962FDDB23F4AEB0FDF44DBD /* Pods-ISSTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 			children = (
 				9453B7B01D3811A4004B67D0 /* AppDelegate.swift */,
 				9453B7B61D3811A4004B67D0 /* Main.storyboard */,
+				94F3688F1D38316E000272D2 /* InfoViewController.swift */,
 				9453B7B91D3811A4004B67D0 /* Assets.xcassets */,
 				9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */,
 				94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */,
@@ -335,6 +338,7 @@
 				94F368801D381E73000272D2 /* ModelObjectUpdater.swift in Sources */,
 				94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */,
 				9453B7B11D3811A4004B67D0 /* AppDelegate.swift in Sources */,
+				94F368901D38316E000272D2 /* InfoViewController.swift in Sources */,
 				94F3687E1D381D38000272D2 /* CurrentISSPosition.swift in Sources */,
 				94BF007D1D3815D500BD2C83 /* Request.swift in Sources */,
 				94F3688B1D38264E000272D2 /* PassTime.swift in Sources */,
