@@ -10,6 +10,12 @@ import UIKit
 
 final class SavedLocationCell: UITableViewCell {
 
+    @IBOutlet private weak var favoriteNameStackView: UIStackView!
+    @IBOutlet private weak var favoriteNameLabel: UILabel!
+    @IBOutlet private weak var nextPassTimeLabel: UILabel!
+    @IBOutlet private weak var coordinatesLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

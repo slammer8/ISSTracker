@@ -100,6 +100,12 @@
                     <constraint firstItem="FF0-aA-JD2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="uCn-Su-DwH"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="coordinatesLabel" destination="cbk-Ud-ayK" id="G1A-Mm-31i"/>
+                <outlet property="favoriteNameLabel" destination="MxQ-FP-lQh" id="bD7-6V-c2h"/>
+                <outlet property="favoriteNameStackView" destination="LZw-tZ-jxz" id="rHo-hR-hYb"/>
+                <outlet property="nextPassTimeLabel" destination="4xE-Za-Ig2" id="8PX-Ru-hyd"/>
+            </connections>
             <point key="canvasLocation" x="517.5" y="458"/>
         </tableViewCell>
     </objects>

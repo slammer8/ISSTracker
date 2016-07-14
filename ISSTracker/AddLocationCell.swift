@@ -10,6 +10,11 @@ import UIKit
 
 final class AddLocationCell: UITableViewCell {
 
+    @IBOutlet private weak var favoriteNameTextField: UITextField!
+    @IBOutlet private weak var lattitudeTextField: UITextField!
+    @IBOutlet private weak var longitudeTextField: UITextField!
+    @IBOutlet private weak var saveFavoriteButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
