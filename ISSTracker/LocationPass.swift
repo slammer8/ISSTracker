@@ -10,29 +10,33 @@ import CoreLocation
 import Foundation
 
 /// Details a returned location pass for specified location.
-final class LocationPass {
+final class LocationPass: Parseable {
     
     /// The location requested.
     let location: CLLocationCoordinate2D
     
-    /// The time of the apperance.
-    let riseTime: NSDate
+    /// The time of the request.
+    let timeStamp: NSDate
     
-    /// The duration of the pass.
-    let duration: NSTimeInterval
+    /// Array of pass times.
+    let passTimes: [PassTime]
     
     /**
      Initializes a LocationPass.
      
      - parameter location: The location in the request.
-     - parameter riseTime: The time when the object will appear.
-     - parameter duration: The duration of the ISS.
+     - parameter requestTime: The time of the request.
+     - parameter passTimes: The array of PassTime objects.
      
      - returns: An initialized LocationPass.
      */
-    init(location: CLLocationCoordinate2D, riseTime: NSDate, duration: NSTimeInterval) {
+    init(location: CLLocationCoordinate2D, timeStamp: NSDate, passTimes: [PassTime]) {
         self.location = location
-        self.riseTime = riseTime
-        self.duration = duration
+        self.timeStamp = timeStamp
+        self.passTimes = passTimes
     }
+}
+
+extension LocationPass {
+    typealias ParserType = LocationPassParser
 }

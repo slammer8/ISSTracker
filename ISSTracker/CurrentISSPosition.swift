@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-final class CurrentISSPosition {
+final class CurrentISSPosition: Parseable {
     
     /// The time of the request.
     let timeStamp: NSDate
@@ -30,4 +30,8 @@ final class CurrentISSPosition {
         self.currentPosition = currentPosition
     }
 
+}
+
+extension CurrentISSPosition {
+    typealias ParserType = CurrentISSPositionParser
 }

@@ -20,6 +20,9 @@
 		94F368801D381E73000272D2 /* ModelObjectUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */; };
 		94F368821D381E94000272D2 /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F368811D381E94000272D2 /* Parseable.swift */; };
 		94F368841D381EDE000272D2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F368831D381EDE000272D2 /* Result.swift */; };
+		94F368891D382075000272D2 /* LocationPassParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F368881D382075000272D2 /* LocationPassParser.swift */; };
+		94F3688B1D38264E000272D2 /* PassTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3688A1D38264E000272D2 /* PassTime.swift */; };
+		94F3688D1D382DA8000272D2 /* CurrentISSPositionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3688C1D382DA8000272D2 /* CurrentISSPositionParser.swift */; };
 		9CF1193C28862EC83D5BC83E /* Pods_ISSTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObjectUpdater.swift; sourceTree = "<group>"; };
 		94F368811D381E94000272D2 /* Parseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
 		94F368831D381EDE000272D2 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		94F368881D382075000272D2 /* LocationPassParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPassParser.swift; sourceTree = "<group>"; };
+		94F3688A1D38264E000272D2 /* PassTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassTime.swift; sourceTree = "<group>"; };
+		94F3688C1D382DA8000272D2 /* CurrentISSPositionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentISSPositionParser.swift; sourceTree = "<group>"; };
 		D962FDDB23F4AEB0FDF44DBD /* Pods-ISSTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,10 +116,9 @@
 				9453B7B61D3811A4004B67D0 /* Main.storyboard */,
 				9453B7B91D3811A4004B67D0 /* Assets.xcassets */,
 				9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */,
-				94F368851D382008000272D2 /* Objects */,
 				94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */,
-				94F368831D381EDE000272D2 /* Result.swift */,
-				94F368811D381E94000272D2 /* Parseable.swift */,
+				94F368851D382008000272D2 /* Objects */,
+				94F3688E1D382EE7000272D2 /* Parsing */,
 				94BF00821D381A1900BD2C83 /* Networking */,
 				9453B7BE1D3811A4004B67D0 /* Info.plist */,
 			);
@@ -132,6 +137,7 @@
 		94BF00821D381A1900BD2C83 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				94F368831D381EDE000272D2 /* Result.swift */,
 				94BF007C1D3815D500BD2C83 /* Request.swift */,
 				94BF007E1D38165C00BD2C83 /* ISSRequest.swift */,
 				94BF00801D3818AA00BD2C83 /* NetworkController.swift */,
@@ -142,10 +148,21 @@
 		94F368851D382008000272D2 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				94BF00831D381A9100BD2C83 /* LocationPass.swift */,
 				94F3687D1D381D38000272D2 /* CurrentISSPosition.swift */,
+				94BF00831D381A9100BD2C83 /* LocationPass.swift */,
+				94F3688A1D38264E000272D2 /* PassTime.swift */,
 			);
 			name = Objects;
+			sourceTree = "<group>";
+		};
+		94F3688E1D382EE7000272D2 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				94F368881D382075000272D2 /* LocationPassParser.swift */,
+				94F3688C1D382DA8000272D2 /* CurrentISSPositionParser.swift */,
+				94F368811D381E94000272D2 /* Parseable.swift */,
+			);
+			name = Parsing;
 			sourceTree = "<group>";
 		};
 		E2BCF112981F40652F302AD4 /* Pods */ = {
@@ -310,14 +327,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F368841D381EDE000272D2 /* Result.swift in Sources */,
+				94F3688D1D382DA8000272D2 /* CurrentISSPositionParser.swift in Sources */,
 				94BF00841D381A9100BD2C83 /* LocationPass.swift in Sources */,
 				94F368821D381E94000272D2 /* Parseable.swift in Sources */,
 				94BF00811D3818AB00BD2C83 /* NetworkController.swift in Sources */,
+				94F368891D382075000272D2 /* LocationPassParser.swift in Sources */,
 				94F368801D381E73000272D2 /* ModelObjectUpdater.swift in Sources */,
 				94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */,
 				9453B7B11D3811A4004B67D0 /* AppDelegate.swift in Sources */,
 				94F3687E1D381D38000272D2 /* CurrentISSPosition.swift in Sources */,
 				94BF007D1D3815D500BD2C83 /* Request.swift in Sources */,
+				94F3688B1D38264E000272D2 /* PassTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
