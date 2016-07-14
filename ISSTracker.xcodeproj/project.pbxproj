@@ -12,6 +12,7 @@
 		9453B7BA1D3811A4004B67D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9453B7B91D3811A4004B67D0 /* Assets.xcassets */; };
 		9453B7BD1D3811A4004B67D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */; };
 		9453B7C81D3811A4004B67D0 /* ISSTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9453B7C71D3811A4004B67D0 /* ISSTrackerTests.swift */; };
+		9CF1193C28862EC83D5BC83E /* Pods_ISSTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18E28C8AC61D6978BA708FB9 /* Pods-ISSTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker.release.xcconfig"; sourceTree = "<group>"; };
+		6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISSTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9453B7AD1D3811A3004B67D0 /* ISSTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9453B7B01D3811A4004B67D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9453B7B71D3811A4004B67D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		9453B7C31D3811A4004B67D0 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9453B7C71D3811A4004B67D0 /* ISSTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTrackerTests.swift; sourceTree = "<group>"; };
 		9453B7C91D3811A4004B67D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D962FDDB23F4AEB0FDF44DBD /* Pods-ISSTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF1193C28862EC83D5BC83E /* Pods_ISSTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F1A713B169B840BB253EB4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9453B7A41D3811A3004B67D0 = {
 			isa = PBXGroup;
 			children = (
 				9453B7AF1D3811A4004B67D0 /* ISSTracker */,
 				9453B7C61D3811A4004B67D0 /* ISSTrackerTests */,
 				9453B7AE1D3811A3004B67D0 /* Products */,
+				E2BCF112981F40652F302AD4 /* Pods */,
+				8F1A713B169B840BB253EB4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +108,15 @@
 			path = ISSTrackerTests;
 			sourceTree = "<group>";
 		};
+		E2BCF112981F40652F302AD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D962FDDB23F4AEB0FDF44DBD /* Pods-ISSTracker.debug.xcconfig */,
+				18E28C8AC61D6978BA708FB9 /* Pods-ISSTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9453B7CC1D3811A4004B67D0 /* Build configuration list for PBXNativeTarget "ISSTracker" */;
 			buildPhases = (
+				499DF0F42C3351E57DCA160C /* [CP] Check Pods Manifest.lock */,
 				9453B7A91D3811A3004B67D0 /* Sources */,
 				9453B7AA1D3811A3004B67D0 /* Frameworks */,
 				9453B7AB1D3811A3004B67D0 /* Resources */,
+				9D0AF5C3273868E46BDF9B0C /* [CP] Embed Pods Frameworks */,
+				33E98D7D5458B82C5593054B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +215,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33E98D7D5458B82C5593054B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		499DF0F42C3351E57DCA160C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9D0AF5C3273868E46BDF9B0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9453B7A91D3811A3004B67D0 /* Sources */ = {
@@ -321,6 +396,7 @@
 		};
 		9453B7CD1D3811A4004B67D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D962FDDB23F4AEB0FDF44DBD /* Pods-ISSTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ISSTracker/Info.plist;
@@ -332,6 +408,7 @@
 		};
 		9453B7CE1D3811A4004B67D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18E28C8AC61D6978BA708FB9 /* Pods-ISSTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ISSTracker/Info.plist;
@@ -384,6 +461,7 @@
 				9453B7CE1D3811A4004B67D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9453B7CF1D3811A4004B67D0 /* Build configuration list for PBXNativeTarget "ISSTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -392,6 +470,7 @@
 				9453B7D11D3811A4004B67D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
