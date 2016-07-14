@@ -80,6 +80,9 @@
                                 <state key="normal" title="Save Favorite">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveFavoriteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3ZU-mX-uwC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
