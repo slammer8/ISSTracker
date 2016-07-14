@@ -17,6 +17,9 @@
 		94BF00811D3818AB00BD2C83 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00801D3818AA00BD2C83 /* NetworkController.swift */; };
 		94BF00841D381A9100BD2C83 /* LocationPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00831D381A9100BD2C83 /* LocationPass.swift */; };
 		94F3687E1D381D38000272D2 /* CurrentISSPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3687D1D381D38000272D2 /* CurrentISSPosition.swift */; };
+		94F368801D381E73000272D2 /* ModelObjectUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */; };
+		94F368821D381E94000272D2 /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F368811D381E94000272D2 /* Parseable.swift */; };
+		94F368841D381EDE000272D2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F368831D381EDE000272D2 /* Result.swift */; };
 		9CF1193C28862EC83D5BC83E /* Pods_ISSTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		94BF00801D3818AA00BD2C83 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		94BF00831D381A9100BD2C83 /* LocationPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPass.swift; sourceTree = "<group>"; };
 		94F3687D1D381D38000272D2 /* CurrentISSPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentISSPosition.swift; sourceTree = "<group>"; };
+		94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObjectUpdater.swift; sourceTree = "<group>"; };
+		94F368811D381E94000272D2 /* Parseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
+		94F368831D381EDE000272D2 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		D962FDDB23F4AEB0FDF44DBD /* Pods-ISSTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +110,10 @@
 				9453B7B61D3811A4004B67D0 /* Main.storyboard */,
 				9453B7B91D3811A4004B67D0 /* Assets.xcassets */,
 				9453B7BB1D3811A4004B67D0 /* LaunchScreen.storyboard */,
-				94BF00831D381A9100BD2C83 /* LocationPass.swift */,
-				94F3687D1D381D38000272D2 /* CurrentISSPosition.swift */,
+				94F368851D382008000272D2 /* Objects */,
+				94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */,
+				94F368831D381EDE000272D2 /* Result.swift */,
+				94F368811D381E94000272D2 /* Parseable.swift */,
 				94BF00821D381A1900BD2C83 /* Networking */,
 				9453B7BE1D3811A4004B67D0 /* Info.plist */,
 			);
@@ -129,6 +137,15 @@
 				94BF00801D3818AA00BD2C83 /* NetworkController.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		94F368851D382008000272D2 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				94BF00831D381A9100BD2C83 /* LocationPass.swift */,
+				94F3687D1D381D38000272D2 /* CurrentISSPosition.swift */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		E2BCF112981F40652F302AD4 /* Pods */ = {
@@ -292,8 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F368841D381EDE000272D2 /* Result.swift in Sources */,
 				94BF00841D381A9100BD2C83 /* LocationPass.swift in Sources */,
+				94F368821D381E94000272D2 /* Parseable.swift in Sources */,
 				94BF00811D3818AB00BD2C83 /* NetworkController.swift in Sources */,
+				94F368801D381E73000272D2 /* ModelObjectUpdater.swift in Sources */,
 				94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */,
 				9453B7B11D3811A4004B67D0 /* AppDelegate.swift in Sources */,
 				94F3687E1D381D38000272D2 /* CurrentISSPosition.swift in Sources */,
