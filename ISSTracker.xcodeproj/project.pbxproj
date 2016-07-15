@@ -49,6 +49,7 @@
 		18E28C8AC61D6978BA708FB9 /* Pods-ISSTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISSTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ISSTracker/Pods-ISSTracker.release.xcconfig"; sourceTree = "<group>"; };
 		6E7DCFCE511D0F50D7678A3B /* Pods_ISSTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISSTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9435BA3F1D387C9900F68107 /* InfoViewCellCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewCellCreator.swift; sourceTree = "<group>"; };
+		9435BA411D3880F600F68107 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		9453B7AD1D3811A3004B67D0 /* ISSTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9453B7B01D3811A4004B67D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9453B7B71D3811A4004B67D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 				94B0C7531D383AA600E30E46 /* SavedLocationCell.xib */,
 				94B0C7561D383D9C00E30E46 /* AddLocationCell.swift */,
 				94B0C7571D383D9C00E30E46 /* AddLocationCell.xib */,
+				9435BA411D3880F600F68107 /* Reusable.swift */,
 			);
 			name = "Reusable Cells";
 			sourceTree = "<group>";
@@ -385,6 +387,7 @@
 				94B0C7541D383AA600E30E46 /* SavedLocationCell.swift in Sources */,
 				94F3687E1D381D38000272D2 /* CurrentISSPosition.swift in Sources */,
 				94B0C7631D3878A800E30E46 /* InfoViewControllerDataSource.swift in Sources */,
+				9435BA421D3880F600F68107 /* Reusable.swift in Sources */,
 				94BF007D1D3815D500BD2C83 /* Request.swift in Sources */,
 				94F3688B1D38264E000272D2 /* PassTime.swift in Sources */,
 			);
