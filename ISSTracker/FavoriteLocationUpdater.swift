@@ -13,7 +13,7 @@ final class FavoriteLocationUpdater {
     private let updater = ModelObjectUpdater<SavedLocation>()
     private let persistenceController = PersistenceController()
     
-    func requestSavedLocation(request: ISSRequest, completion: (Result<SavedLocation> -> Void)){
+    func requestSavedLocation(request: ISSRequest, name: String?, completion: (Result<SavedLocation> -> Void)){
         
         updater.performRequest(request) { [weak self] result in
             
@@ -22,9 +22,15 @@ final class FavoriteLocationUpdater {
             
             switch result {
             case let .Success(result: result):
+                
+                if let name = name where !name.isEmpty {
+                    result.name = name
+                }
+                
                 strongSelf.persistenceController.persistObject(result)
-            case .Failure:
-                assertionFailure("error completing request")
+                
+            case let .Failure(error: error):
+                print("error \(error)")
             }
         }
     }
