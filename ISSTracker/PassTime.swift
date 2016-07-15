@@ -6,27 +6,14 @@
 //  Copyright © 2016 BothPoints. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 
 /// Represents a single ISS pass time.
-final class PassTime {
+final class PassTime: Object {
     
     /// The duration of the pass.
-    let duration: NSTimeInterval
+    dynamic var duration: Double = 0.0
     
-    /// The beginning time of the pass.
-    let riseTime: NSDate
-    
-    /**
-     Initializes a PassTime.
-     
-     - parameter duration: The duration of the pass.
-     - parameter riseTime: The beginning time fo the pass.
-    
-     - returns: A initalized PassTime.
-     */
-    init(duration: NSTimeInterval, riseTime: NSDate) {
-        self.duration = duration
-        self.riseTime = riseTime
-    }
+    /// The rise time.
+    dynamic var riseTime = NSDate()
 }

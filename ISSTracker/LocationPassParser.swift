@@ -8,12 +8,11 @@
 
 import Foundation
 import SwiftyJSON
-import CoreLocation
 
-/// Parsers a LocationPass response.
+/// Parses a SavedLocation response.
 final class LocationPassParser: Parser {
     
-    static func parse(dictionaryRepresentable: [String: AnyObject]) -> LocationPass? {
+    static func parse(dictionaryRepresentable: [String: AnyObject]) -> SavedLocation? {
         
         guard let requestValue = dictionaryRepresentable["request"], responseValue = dictionaryRepresentable["response"] else {
             return nil
@@ -22,21 +21,25 @@ final class LocationPassParser: Parser {
         let requestJSON = JSON(requestValue)
         let responseJSON = JSON(responseValue)
         
-        let timeStamp = NSDate(timeIntervalSince1970: requestJSON["datetime"].doubleValue)
+        let savedLocation = SavedLocation()
         
-        let latitude = requestJSON["latitude"].doubleValue
-        let longitude = requestJSON["longitude"].doubleValue
+        savedLocation.timeStamp = NSDate(timeIntervalSince1970: requestJSON["datetime"].doubleValue)
         
-        let location = CLLocationCoordinate2DMake(latitude, longitude)
+        savedLocation.latitude.value = requestJSON["latitude"].doubleValue
+        savedLocation.longitude.value = requestJSON["longitude"].doubleValue
         
         let passTimes: [PassTime] = responseJSON.flatMap { _, json in
             
-            let duration = json["duration"].doubleValue as NSTimeInterval
-            let riseTime = NSDate(timeIntervalSince1970: json["risetime"].doubleValue)
+            let passTime = PassTime()
+
+            passTime.duration = json["duration"].doubleValue as NSTimeInterval
+            passTime.riseTime = NSDate(timeIntervalSince1970: json["risetime"].doubleValue)
             
-            return PassTime(duration: duration, riseTime: riseTime)
+            return passTime
         }
         
-        return LocationPass(location: location, timeStamp: timeStamp, passTimes: passTimes)
+        savedLocation.passTimes.appendContentsOf(passTimes)
+
+        return savedLocation
     }
 }

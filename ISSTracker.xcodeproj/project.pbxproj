@@ -16,11 +16,12 @@
 		94B0C7581D383D9C00E30E46 /* AddLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0C7561D383D9C00E30E46 /* AddLocationCell.swift */; };
 		94B0C7591D383D9C00E30E46 /* AddLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94B0C7571D383D9C00E30E46 /* AddLocationCell.xib */; };
 		94B0C75B1D38458900E30E46 /* NSDate+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0C75A1D38458900E30E46 /* NSDate+Convenience.swift */; };
+		94B0C75E1D3849E600E30E46 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0C75D1D3849E600E30E46 /* PersistenceController.swift */; };
 		94BF00751D38155C00BD2C83 /* ISSTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */; };
 		94BF007D1D3815D500BD2C83 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF007C1D3815D500BD2C83 /* Request.swift */; };
 		94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF007E1D38165C00BD2C83 /* ISSRequest.swift */; };
 		94BF00811D3818AB00BD2C83 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00801D3818AA00BD2C83 /* NetworkController.swift */; };
-		94BF00841D381A9100BD2C83 /* LocationPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00831D381A9100BD2C83 /* LocationPass.swift */; };
+		94BF00841D381A9100BD2C83 /* SavedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BF00831D381A9100BD2C83 /* SavedLocation.swift */; };
 		94F3687E1D381D38000272D2 /* CurrentISSPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3687D1D381D38000272D2 /* CurrentISSPosition.swift */; };
 		94F368801D381E73000272D2 /* ModelObjectUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */; };
 		94F368821D381E94000272D2 /* Parseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F368811D381E94000272D2 /* Parseable.swift */; };
@@ -56,13 +57,14 @@
 		94B0C7561D383D9C00E30E46 /* AddLocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationCell.swift; sourceTree = "<group>"; };
 		94B0C7571D383D9C00E30E46 /* AddLocationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLocationCell.xib; sourceTree = "<group>"; };
 		94B0C75A1D38458900E30E46 /* NSDate+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Convenience.swift"; sourceTree = "<group>"; };
+		94B0C75D1D3849E600E30E46 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		94BF00721D38155C00BD2C83 /* ISSTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISSTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BF00741D38155C00BD2C83 /* ISSTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSTrackerTests.swift; sourceTree = "<group>"; };
 		94BF00761D38155C00BD2C83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94BF007C1D3815D500BD2C83 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		94BF007E1D38165C00BD2C83 /* ISSRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSRequest.swift; sourceTree = "<group>"; };
 		94BF00801D3818AA00BD2C83 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
-		94BF00831D381A9100BD2C83 /* LocationPass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPass.swift; sourceTree = "<group>"; };
+		94BF00831D381A9100BD2C83 /* SavedLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedLocation.swift; sourceTree = "<group>"; };
 		94F3687D1D381D38000272D2 /* CurrentISSPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentISSPosition.swift; sourceTree = "<group>"; };
 		94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObjectUpdater.swift; sourceTree = "<group>"; };
 		94F368811D381E94000272D2 /* Parseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parseable.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				9453B7B61D3811A4004B67D0 /* Main.storyboard */,
 				94B0C7521D383AA600E30E46 /* SavedLocationCell.swift */,
 				94B0C7531D383AA600E30E46 /* SavedLocationCell.xib */,
+				94B0C75D1D3849E600E30E46 /* PersistenceController.swift */,
 				94B0C7561D383D9C00E30E46 /* AddLocationCell.swift */,
 				94B0C7571D383D9C00E30E46 /* AddLocationCell.xib */,
 				94F3688F1D38316E000272D2 /* InfoViewController.swift */,
@@ -175,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				94F3687D1D381D38000272D2 /* CurrentISSPosition.swift */,
-				94BF00831D381A9100BD2C83 /* LocationPass.swift */,
+				94BF00831D381A9100BD2C83 /* SavedLocation.swift */,
 				94F3688A1D38264E000272D2 /* PassTime.swift */,
 			);
 			name = Objects;
@@ -356,7 +359,7 @@
 			files = (
 				94F368841D381EDE000272D2 /* Result.swift in Sources */,
 				94F3688D1D382DA8000272D2 /* CurrentISSPositionParser.swift in Sources */,
-				94BF00841D381A9100BD2C83 /* LocationPass.swift in Sources */,
+				94BF00841D381A9100BD2C83 /* SavedLocation.swift in Sources */,
 				94F368821D381E94000272D2 /* Parseable.swift in Sources */,
 				94BF00811D3818AB00BD2C83 /* NetworkController.swift in Sources */,
 				94F368891D382075000272D2 /* LocationPassParser.swift in Sources */,
@@ -364,6 +367,7 @@
 				94F368801D381E73000272D2 /* ModelObjectUpdater.swift in Sources */,
 				94BF007F1D38165C00BD2C83 /* ISSRequest.swift in Sources */,
 				9453B7B11D3811A4004B67D0 /* AppDelegate.swift in Sources */,
+				94B0C75E1D3849E600E30E46 /* PersistenceController.swift in Sources */,
 				94B0C75B1D38458900E30E46 /* NSDate+Convenience.swift in Sources */,
 				94F368901D38316E000272D2 /* InfoViewController.swift in Sources */,
 				94B0C7541D383AA600E30E46 /* SavedLocationCell.swift in Sources */,
