@@ -18,14 +18,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="YF5-xV-rRA" kind="relationship" relationship="viewControllers" id="F7x-Cw-odj"/>
+                        <segue destination="uer-aK-O2I" kind="relationship" relationship="viewControllers" id="F7x-Cw-odj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-189" y="6"/>
         </scene>
-        <!--Item-->
+        <!--Info View Controller-->
         <scene sceneID="wMg-6u-3Aj">
             <objects>
                 <tableViewController id="YF5-xV-rRA" customClass="InfoViewController" customModule="ISSTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,11 +38,30 @@
                             <outlet property="delegate" destination="YF5-xV-rRA" id="VEK-MJ-kZ6"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ZO4-gb-tp0"/>
+                    <navigationItem key="navigationItem" id="vYU-51-MB4"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="500"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXq-NN-aaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-273"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="sPB-XX-9I1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uer-aK-O2I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ZO4-gb-tp0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6e8-bn-TNr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YF5-xV-rRA" kind="relationship" relationship="rootViewController" id="4jN-Rd-32g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFX-Sk-cJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="256" y="-273"/>
         </scene>

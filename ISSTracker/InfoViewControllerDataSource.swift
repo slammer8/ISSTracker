@@ -67,15 +67,15 @@ final class InfoViewControllerDataSource: NSObject {
      
      - returns: An initialized InfoViewControllerDataSource.
      */
-    init(tableView: UITableView) {
+    init(tableView: UITableView, cellCreator: InfoViewCellCreator) {
         self.tableView = tableView
-        self.cellCreator = InfoViewCellCreator(tableView: tableView)
+        self.cellCreator = cellCreator
         self.sections = InfoViewControllerDataSource.createSections()
     }
     
     private static func createSections() -> [Section] {
         //TODO: fix
-        return [Section.AddLocation]
+        return [Section.AddLocation, Section.SavedLocations(savedLocations: [])]
     }
 
 }
@@ -99,6 +99,6 @@ extension InfoViewControllerDataSource: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return cellCreator.cell(tableView, cellForRowAtIndexPath: indexPath)
+        return cellCreator.cell(tableView, cellForRowAtIndexPath: indexPath, sections: sections)
     }
 }
