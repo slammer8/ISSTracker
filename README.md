@@ -26,3 +26,6 @@ Clone the project.
 Run "pod install" in terminal.
 Build it in XCode
 
+## Notes
+
+It seems if you make too many requests, the API will time out.
