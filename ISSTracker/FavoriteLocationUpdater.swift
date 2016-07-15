@@ -11,7 +11,6 @@
 final class FavoriteLocationUpdater {
     
     private let updater = ModelObjectUpdater<SavedLocation>()
-    private let persistenceController = PersistenceController()
     
     /**
      Requests the next flyover time for a location.

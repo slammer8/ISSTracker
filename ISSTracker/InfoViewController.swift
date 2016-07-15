@@ -15,6 +15,7 @@ final class InfoViewController: UITableViewController {
     private var dataSource: InfoViewControllerDataSource?
     private lazy var cellCreator: InfoViewCellCreator = InfoViewCellCreator(tableView: self.tableView)
     private let updater = FavoriteLocationUpdater()
+    private let persistenceController = PersistenceController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
