@@ -14,6 +14,7 @@ final class InfoViewController: UITableViewController {
 
     private var dataSource: InfoViewControllerDataSource?
     private var cellCreator: InfoViewCellCreator?
+    private let updater = FavoriteLocationUpdater()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,23 @@ final class InfoViewController: UITableViewController {
 
 extension InfoViewController: AddLocationCellDelegate {
     func addLocationCell(addLocationCell: AddLocationCell, lat: Double, long: Double, name: String?) {
-        // make the request
-        print("delegate pressed with \(lat), \(long), \(name)")
+        
+        let location = CLLocationCoordinate2DMake(lat, long)
+        
+        let favoriteRequest = ISSRequest.LocationPassTime(location: location)
+        
+        updater.requestSavedLocation(favoriteRequest) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+            switch result {
+            case let .Success(result: result):
+                print(result.passTimes)
+            case .Failure:
+                print("error making request")
+            }
+            
+        }
+
     }
 }
