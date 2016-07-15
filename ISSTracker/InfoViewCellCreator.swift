@@ -8,7 +8,11 @@
 
 import UIKit
 
+/// A cell creator for the InfoViewController.
 final class InfoViewCellCreator {
+    
+    /// Delegate for the Add Location Cell
+    var delegate: AddLocationCellDelegate?
     
     private let tableView: UITableView
     
@@ -21,20 +25,24 @@ final class InfoViewCellCreator {
         tableView.estimatedRowHeight = 100
         tableView.registerReusableCell(AddLocationCell.self)
         tableView.registerReusableCell(SavedLocationCell.self)
+        tableView.allowsSelection = false
     }
     
-    func cell(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, sections: [InfoViewControllerDataSource.Section]) -> UITableViewCell {
+    func cell(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, section: InfoViewControllerDataSource.Section) -> UITableViewCell {
         
         let cell: UITableViewCell
 
-        switch indexPath.section {
-        case 0:
+        switch section {
+        case .AddLocation:
             cell = tableView.dequeueReusableCell(indexPath: indexPath) as AddLocationCell
-        case 1:
+            
+            if let addLocationCell = cell as? AddLocationCell {
+                addLocationCell.delegate = delegate
+            }
+            
+        case let .SavedLocations(savedLocations: savedLocations):
             cell = tableView.dequeueReusableCell(indexPath: indexPath) as SavedLocationCell
-        default:
-            print("this shoudln't happen")
-            return UITableViewCell()
+            // create the saved location cells
         }
         
         return cell

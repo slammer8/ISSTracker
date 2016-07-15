@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A data source for the InfoViewController.
 final class InfoViewControllerDataSource: NSObject {
     
     /// Describing the possible sections in the table view.
@@ -51,7 +52,8 @@ final class InfoViewControllerDataSource: NSObject {
         }
     }
     
-    private var sections: [Section] {
+    /// The sections of the dataSource.
+    var sections: [Section] {
         didSet {
             tableView.reloadData()
         }
@@ -73,12 +75,29 @@ final class InfoViewControllerDataSource: NSObject {
         self.sections = InfoViewControllerDataSource.createSections()
     }
     
+    /**
+     Returns a section for a given section index.
+     
+     - parameter sectionIndex: The section index requested.
+     
+     - returns: The section associated with the index.
+     */
+    func sectionForSectionIndex(sectionIndex: Int) -> Section? {
+        guard sectionIndex < sections.count else  {
+            return nil
+        }
+        
+        return sections[sectionIndex]
+    }
+    
     private static func createSections() -> [Section] {
         //TODO: fix
         return [Section.AddLocation, Section.SavedLocations(savedLocations: [])]
     }
 
 }
+
+//MARK: - UITableViewDataSource
 
 extension InfoViewControllerDataSource: UITableViewDataSource {
     
@@ -99,6 +118,12 @@ extension InfoViewControllerDataSource: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return cellCreator.cell(tableView, cellForRowAtIndexPath: indexPath, sections: sections)
+        
+        guard let section = sectionForSectionIndex(indexPath.section) else {
+            assertionFailure("section index out of range, sections not set up properly")
+            return UITableViewCell()
+        }
+        
+        return cellCreator.cell(tableView, cellForRowAtIndexPath: indexPath, section: section)
     }
 }
