@@ -22,10 +22,11 @@ final class MapViewController: UIViewController {
     override func viewDidLoad() {
         title = NSLocalizedString("Map View", comment: "Map View")
         locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
     }
     
     @IBAction private func meBarButtonPressed(sender: AnyObject) {
-        locationManager.requestLocation()
+        locationManager.startUpdatingLocation()
     }
     
     @IBAction private func ISSBarButtonPressed(sender: AnyObject) {

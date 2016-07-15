@@ -13,26 +13,16 @@ final class FavoriteLocationUpdater {
     private let updater = ModelObjectUpdater<SavedLocation>()
     private let persistenceController = PersistenceController()
     
+    /**
+     Requests the next flyover time for a location.
+     
+     - parameter request:    The request to make.
+     - parameter name:       The name to save with the request, if any.
+     - parameter completion: The completion handler.
+     */
     func requestSavedLocation(request: ISSRequest, name: String?, completion: (Result<SavedLocation> -> Void)){
         
-        updater.performRequest(request) { [weak self] result in
-            
-            // Don't persist if we don't have self
-            guard let strongSelf = self else { return }
-            
-            switch result {
-            case let .Success(result: result):
-                
-                if let name = name where !name.isEmpty {
-                    result.name = name
-                }
-                
-                strongSelf.persistenceController.persistObject(result)
-                
-            case let .Failure(error: error):
-                print("error \(error)")
-            }
-        }
+        updater.performRequest(request, completion: completion)
     }
 
 }

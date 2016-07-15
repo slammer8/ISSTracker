@@ -41,7 +41,18 @@ final class InfoViewController: UITableViewController {
             
             guard let strongSelf = self else { return }
             
-            strongSelf.dataSource?.updateSections()
+            switch result {
+            case let .Success(result: result):
+                
+                if let name = name where !name.isEmpty {
+                    result.name = name
+                }
+                
+                strongSelf.persistenceController.persistObject(result)
+                strongSelf.dataSource?.updateSections()
+            case let .Failure(error: error):
+                print("error \(error)")
+            }
         }
     }
 

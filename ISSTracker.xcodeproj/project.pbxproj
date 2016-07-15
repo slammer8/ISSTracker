@@ -119,8 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				9435BA481D391B5A00F68107 /* PersistenceController.swift */,
-				9435BA451D39179600F68107 /* FavoriteLocationUpdater.swift */,
 				94F3687F1D381E73000272D2 /* ModelObjectUpdater.swift */,
+				9435BA4D1D3934FE00F68107 /* MapUpdater.swift */,
+				9435BA451D39179600F68107 /* FavoriteLocationUpdater.swift */,
 			);
 			name = Updaters;
 			sourceTree = "<group>";
@@ -162,7 +163,6 @@
 				9453B7B61D3811A4004B67D0 /* Main.storyboard */,
 				9453B7B01D3811A4004B67D0 /* AppDelegate.swift */,
 				9435BA4A1D392F4F00F68107 /* MapViewController.swift */,
-				9435BA4D1D3934FE00F68107 /* MapUpdater.swift */,
 				9435BA4C1D392F6900F68107 /* InfoViewController */,
 				9435BA471D3918D000F68107 /* Updaters */,
 				94F368851D382008000272D2 /* Objects */,
