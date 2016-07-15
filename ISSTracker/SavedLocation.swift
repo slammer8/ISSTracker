@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 import RealmSwift
 
 /// Details a saved location with pass details.
