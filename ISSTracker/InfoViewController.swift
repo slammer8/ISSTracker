@@ -13,7 +13,7 @@ import CoreLocation
 final class InfoViewController: UITableViewController {
 
     private var dataSource: InfoViewControllerDataSource?
-    private var cellCreator: InfoViewCellCreator?
+    private lazy var cellCreator: InfoViewCellCreator = InfoViewCellCreator(tableView: self.tableView)
     private let updater = FavoriteLocationUpdater()
     
     override func viewDidLoad() {
@@ -22,16 +22,24 @@ final class InfoViewController: UITableViewController {
     }
     
     private func setUp() {
-        cellCreator = InfoViewCellCreator(tableView: tableView)
-        cellCreator?.delegate = self
-        guard let cellCreator = cellCreator else {
-            assertionFailure("Cell creator not set up properly")
-            return
-        }
-        
+        cellCreator.delegate = self
         dataSource = InfoViewControllerDataSource(tableView: tableView, cellCreator: cellCreator)
         tableView.dataSource = dataSource
         tableView.reloadData()
+    }
+    
+    private func performLocationRequest(lat: Double, long: Double, name: String?) {
+        let location = CLLocationCoordinate2DMake(lat, long)
+        
+        let favoriteRequest = ISSRequest.LocationPassTime(location: location)
+        
+        updater.requestSavedLocation(favoriteRequest) { [weak self] result in
+            
+            guard let strongSelf = self else { return }
+            
+
+        }
+
     }
 
 }
@@ -41,22 +49,6 @@ final class InfoViewController: UITableViewController {
 extension InfoViewController: AddLocationCellDelegate {
     func addLocationCell(addLocationCell: AddLocationCell, lat: Double, long: Double, name: String?) {
         
-        let location = CLLocationCoordinate2DMake(lat, long)
-        
-        let favoriteRequest = ISSRequest.LocationPassTime(location: location)
-        
-        updater.requestSavedLocation(favoriteRequest) { [weak self] result in
-            
-            guard let strongSelf = self else { return }
-            
-            switch result {
-            case let .Success(result: result):
-                print(result.passTimes)
-            case .Failure:
-                print("error making request")
-            }
-            
-        }
-
+        performLocationRequest(lat, long: long, name: name)
     }
 }

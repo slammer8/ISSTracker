@@ -7,15 +7,25 @@
 //
 
 
-/// Makes a request for a favorite location
+/// Makes a request for a favorite location and persists the result.
 final class FavoriteLocationUpdater {
     
-    let updater = ModelObjectUpdater<SavedLocation>()
+    private let updater = ModelObjectUpdater<SavedLocation>()
+    private let persistenceController = PersistenceController()
     
     func requestSavedLocation(request: ISSRequest, completion: (Result<SavedLocation> -> Void)){
         
-        updater.performRequest(request) { result in
-            completion(result)
+        updater.performRequest(request) { [weak self] result in
+            
+            // Don't persist if we don't have self
+            guard let strongSelf = self else { return }
+            
+            switch result {
+            case let .Success(result: result):
+                strongSelf.persistenceController.persistObject(result)
+            case .Failure:
+                assertionFailure("error completing request")
+            }
         }
     }
 

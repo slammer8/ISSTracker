@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 /// A data source for the InfoViewController.
 final class InfoViewControllerDataSource: NSObject {
@@ -18,7 +19,7 @@ final class InfoViewControllerDataSource: NSObject {
         case AddLocation
         
         /// The saved locations section.
-        case SavedLocations(savedLocations: [SavedLocation])
+        case SavedLocations(savedLocations: Results<SavedLocation>)
         
         /// The number of rows that should be displayed.
         var numberOfRows: Int {
@@ -91,8 +92,10 @@ final class InfoViewControllerDataSource: NSObject {
     }
     
     private static func createSections() -> [Section] {
-        //TODO: fix
-        return [Section.AddLocation, Section.SavedLocations(savedLocations: [])]
+        
+        let savedLocations = PersistenceController().store.objects(SavedLocation)
+        
+        return [Section.AddLocation, Section.SavedLocations(savedLocations: savedLocations)]
     }
 
 }
