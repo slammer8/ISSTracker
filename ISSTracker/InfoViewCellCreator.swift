@@ -34,26 +34,26 @@ final class InfoViewCellCreator {
 
         switch section {
         case .AddLocation:
-            cell = tableView.dequeueReusableCell(indexPath: indexPath) as AddLocationCell
+            let addLocationCell = tableView.dequeueReusableCell(indexPath: indexPath) as AddLocationCell
             
-            if let addLocationCell = cell as? AddLocationCell {
-                addLocationCell.delegate = delegate
-            }
+            addLocationCell.delegate = delegate
+            
+            cell = addLocationCell
             
         case let .SavedLocations(savedLocations: savedLocations):
-            cell = tableView.dequeueReusableCell(indexPath: indexPath) as SavedLocationCell
+            let savedLocationCell = tableView.dequeueReusableCell(indexPath: indexPath) as SavedLocationCell
             
             let savedLocation = savedLocations[indexPath.row]
-            
-            if let savedLocationCell = cell as? SavedLocationCell {
                 
-                savedLocationCell.viewModel = SavedLocationCell.ViewModel(
-                    name: savedLocation.name,
-                    latitude: savedLocation.latitude.value,
-                    longitude: savedLocation.longitude.value,
-                    nextPass: savedLocation.passTimes.first?.riseTime
-                )
-            }
+            savedLocationCell.viewModel = SavedLocationCell.ViewModel(
+                name: savedLocation.name,
+                latitude: savedLocation.latitude.value,
+                longitude: savedLocation.longitude.value,
+                nextPass: savedLocation.passTimes.first?.riseTime
+            )
+            
+            cell = savedLocationCell
+            
         }
         
         return cell
