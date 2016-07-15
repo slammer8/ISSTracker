@@ -9,8 +9,12 @@
 import UIKit
 import CoreLocation
 
-final class SavedLocationCell: UITableViewCell {
+final class SavedLocationCell: UITableViewCell, Reusable {
 
+    static var nib: UINib? {
+        return UINib(nibName: String(SavedLocationCell.self), bundle: nil)
+    }
+    
     /// Date format of the cell (September 15, 2016 3:45:25 pm PST)
     private static let DateFormat = "MMMM dd yyyy h:mm:ss a zzz"
 

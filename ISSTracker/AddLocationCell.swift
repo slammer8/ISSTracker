@@ -8,8 +8,12 @@
 
 import UIKit
 
-final class AddLocationCell: UITableViewCell {
+final class AddLocationCell: UITableViewCell, Reusable {
 
+    static var nib: UINib? {
+        return UINib(nibName: String(AddLocationCell.self), bundle: nil)
+    }
+    
     @IBOutlet private weak var favoriteNameTextField: UITextField!
     @IBOutlet private weak var lattitudeTextField: UITextField!
     @IBOutlet private weak var longitudeTextField: UITextField!
