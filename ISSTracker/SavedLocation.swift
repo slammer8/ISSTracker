@@ -12,6 +12,9 @@ import RealmSwift
 /// Details a saved location with pass details.
 final class SavedLocation: Object, Parseable {
     
+    /// The name of the saved location.
+    dynamic var name = ""
+    
     /// The longitude of the location.
     let longitude = RealmOptional<Double>()
     

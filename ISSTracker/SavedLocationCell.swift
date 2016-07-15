@@ -7,19 +7,19 @@
 //
 
 import UIKit
-import CoreLocation
 
 /// A saved location cell.
 final class SavedLocationCell: UITableViewCell {
     
     /// Date format of the cell (September 15, 2016 3:45:25 pm PST)
-    private static let DateFormat = "MMMM dd yyyy h:mm:ss a zzz"
+    static let DateFormat = "MMMM dd yyyy h:mm:ss a zzz"
 
     /// A view model to configure the cell
     struct ViewModel {
         var name: String?
-        let location: CLLocationCoordinate2D
-        let nextPass: NSDate
+        let latitude: Double?
+        let longitude: Double?
+        let nextPass: NSDate?
     }
     
     /// When this is set, the view will be configured.
@@ -44,17 +44,17 @@ final class SavedLocationCell: UITableViewCell {
     
     private func setUpCell() {
         
-        if let name = viewModel?.name {
+        if let name = viewModel?.name where !name.isEmpty {
             favoriteNameLabel.text = name
             favoriteNameStackView.hidden = false
         } else {
             favoriteNameStackView.hidden = true
         }
         
-        nextPassTimeLabel.text = viewModel?.nextPass.convertToLocaleUsingDateFormat(self.dynamicType.DateFormat) ?? ""
+        nextPassTimeLabel.text = viewModel?.nextPass?.convertToLocaleUsingDateFormat(self.dynamicType.DateFormat) ?? ""
         
-        if let lat = viewModel?.location.latitude, lon = viewModel?.location.longitude {
-            coordinatesLabel.text = "\(lat), \(lon)"
+        if let lat = viewModel?.latitude, long = viewModel?.longitude {
+            coordinatesLabel.text = "\(lat), \(long)"
         } else {
             coordinatesLabel.text = ""
         }
