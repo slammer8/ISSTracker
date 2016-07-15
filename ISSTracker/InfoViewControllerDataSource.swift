@@ -54,7 +54,7 @@ final class InfoViewControllerDataSource: NSObject {
     }
     
     /// The sections of the dataSource.
-    var sections: [Section] {
+    var sections: [Section] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -73,7 +73,6 @@ final class InfoViewControllerDataSource: NSObject {
     init(tableView: UITableView, cellCreator: InfoViewCellCreator) {
         self.tableView = tableView
         self.cellCreator = cellCreator
-        self.sections = InfoViewControllerDataSource.createSections()
     }
     
     /**
@@ -91,11 +90,14 @@ final class InfoViewControllerDataSource: NSObject {
         return sections[sectionIndex]
     }
     
-    private static func createSections() -> [Section] {
+    /**
+     Updates the sections of the data source.
+     */
+    func updateSections() {
         
         let savedLocations = PersistenceController().store.objects(SavedLocation)
         
-        return [Section.AddLocation, Section.SavedLocations(savedLocations: savedLocations)]
+        sections = [Section.AddLocation, Section.SavedLocations(savedLocations: savedLocations)]
     }
 
 }

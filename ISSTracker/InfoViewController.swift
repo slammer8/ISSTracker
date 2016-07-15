@@ -22,8 +22,12 @@ final class InfoViewController: UITableViewController {
     }
     
     private func setUp() {
+        title = NSLocalizedString("Favorites", comment: "Saved Favorites")
+        
         cellCreator.delegate = self
         dataSource = InfoViewControllerDataSource(tableView: tableView, cellCreator: cellCreator)
+        
+        dataSource?.updateSections()
         tableView.dataSource = dataSource
         tableView.reloadData()
     }
@@ -33,13 +37,12 @@ final class InfoViewController: UITableViewController {
         
         let favoriteRequest = ISSRequest.LocationPassTime(location: location)
         
-        updater.requestSavedLocation(favoriteRequest) { [weak self] result in
+        updater.requestSavedLocation(favoriteRequest, name: name) { [weak self] result in
             
             guard let strongSelf = self else { return }
             
-
+            strongSelf.dataSource?.updateSections()
         }
-
     }
 
 }

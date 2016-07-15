@@ -42,7 +42,18 @@ final class InfoViewCellCreator {
             
         case let .SavedLocations(savedLocations: savedLocations):
             cell = tableView.dequeueReusableCell(indexPath: indexPath) as SavedLocationCell
-            // create the saved location cells
+            
+            let savedLocation = savedLocations[indexPath.row]
+            
+            if let savedLocationCell = cell as? SavedLocationCell {
+                
+                savedLocationCell.viewModel = SavedLocationCell.ViewModel(
+                    name: savedLocation.name,
+                    latitude: savedLocation.latitude.value,
+                    longitude: savedLocation.longitude.value,
+                    nextPass: savedLocation.passTimes.first?.riseTime
+                )
+            }
         }
         
         return cell
